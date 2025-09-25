@@ -33,8 +33,8 @@ public class ItensController{
         return "form";
     }
 
-@PostMapping
-public String create(@Valid Item item, BindingResult result, RedirectAttributes redirect){
+@PostMapping("/form")
+    public String create(@Valid Item item, BindingResult result, RedirectAttributes redirect){
     if(result.hasErrors()) return "form";
 
     System.out.println("Adicionando Item..." + item);
