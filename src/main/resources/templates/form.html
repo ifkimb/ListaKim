@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="black">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpicTask</title>
+</head>
+<body>
+
+    <form class="mx-auto mt-8 w-lg" method="post" th:object="${item}">
+        <h2 class="text-2xl font-bold text-primary">Novo Item</h2>
+
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend">Item</legend>
+            <input name="item" type="text" class="input" placeholder="Item" />
+            <p class="label text error" th:errors="*{item}"></p>
+        </fieldset>
+
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend">Quantidade</legend>
+            <input name="qtde" type="number" class="input" placeholder="Quantidade" />
+            <p class="label text error" th:errors="*{qtde}"></p>
+        </fieldset>
+
+        <div>
+            <a href="/itens" class="btn btn-neutral">Cancelar</a>
+            <button class="btn btn-primary">Salvar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
