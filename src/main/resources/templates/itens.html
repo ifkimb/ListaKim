@@ -23,7 +23,7 @@
 
         <fieldset th:each="item : ${itens}" class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4 m-4">
             <label class="label" >
-                <input type="checkbox" class="checkbox" th:text="${item.item} + 'Quantidade: ' + ${item.qtde}"/>
+                <input type="checkbox" class="checkbox" th:text="${item.nome} + ' Quantidade: ' + ${item.qtde}"/>
             </label>
         </fieldset>
 
